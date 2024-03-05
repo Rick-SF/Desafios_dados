@@ -1,0 +1,69 @@
+/* Lógico_1: */
+
+CREATE TABLE professor (
+    nome VARCHAR,
+    cpf NUMERIC PRIMARY KEY,
+    idade NUMERIC
+);
+
+CREATE TABLE disciplina (
+    horario TIMESTAMP,
+    dia_semana VARCHAR
+);
+
+CREATE TABLE aluno (
+    id_aluno NUMERIC PRIMARY KEY,
+    nome VARCHAR
+);
+
+CREATE TABLE Turma (
+    num_sala NUMERIC,
+    num_alunos NUMERIC
+);
+
+CREATE TABLE Secretaria (
+    coordenador(a) VARCHAR PRIMARY KEY,
+    email VARCHAR
+);
+
+CREATE TABLE leciona (
+    fk_professor_cpf NUMERIC
+);
+
+CREATE TABLE estuda (
+    fk_aluno_id_aluno NUMERIC
+);
+
+CREATE TABLE Matricula (
+    fk_aluno_id_aluno NUMERIC
+);
+
+CREATE TABLE coordena_professor_Secretaria_Turma (
+    fk_professor_cpf NUMERIC,
+    fk_Secretaria_coordenador(a) VARCHAR
+);
+ 
+ALTER TABLE leciona ADD CONSTRAINT FK_leciona_1
+    FOREIGN KEY (fk_professor_cpf)
+    REFERENCES professor (cpf)
+    ON DELETE SET NULL;
+ 
+ALTER TABLE estuda ADD CONSTRAINT FK_estuda_1
+    FOREIGN KEY (fk_aluno_id_aluno)
+    REFERENCES aluno (id_aluno)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Matricula ADD CONSTRAINT FK_Matricula_1
+    FOREIGN KEY (fk_aluno_id_aluno)
+    REFERENCES aluno (id_aluno)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE coordena_professor_Secretaria_Turma ADD CONSTRAINT FK_coordena_professor_Secretaria_Turma_1
+    FOREIGN KEY (fk_professor_cpf)
+    REFERENCES professor (cpf)
+    ON DELETE NO ACTION;
+ 
+ALTER TABLE coordena_professor_Secretaria_Turma ADD CONSTRAINT FK_coordena_professor_Secretaria_Turma_2
+    FOREIGN KEY (fk_Secretaria_coordenador(a))
+    REFERENCES Secretaria (coordenador(a))
+    ON DELETE NO ACTION;
