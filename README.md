@@ -1,2 +1,2 @@
 # Desafios_Dados
- Desafios diários de dados da fábrica de software.
+ Desafios da semana do WorkShop para entrar na fábrica de software.
