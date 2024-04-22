@@ -1,2 +1,2 @@
 # Desafios_Dados
- Desafios da semana do WorkShop para entrar na fábrica de software.
+ Resolução de tarefas envolvendo análise de dados, modelagem de dados e SQL.
