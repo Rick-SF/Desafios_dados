@@ -1,0 +1,7 @@
+Desafio dia 2:
+O desafio de hoje consiste em continuar o que já vínhamos desenvolvendo, então serão 6 inserts em cada tabela, e uma aplicação de cada exemplo daqueles que anotamos, caso o seu projeto não tenha nenhuma tabela que tenha valores, crie uma que tenha para poder fazer as operações matemáticas.
+Obs: para usar as funções matemáticas os atributos deve ser inteiros ou decimais.
+Sintaxe de decimal é, por exemplo:
+Salario decimal(10,2), ou seja, Pode conter até 10 casas a esquerda e até 2 a direita representando os centavos.
+
+Depois de tudo feito, deve salvar como .sql e subir para o Github até amanhã às 12:00.
